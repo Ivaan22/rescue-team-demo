@@ -53,5 +53,5 @@ document.addEventListener('submit',e=>{const f=e.target;if(!['service-form','ass
  if(f.id==='notes-form'){findService(f.dataset.id).notes=data.notes.trim();save('Nota guardada');$('#print-root').innerHTML=report(findService(f.dataset.id));}
 });
 $('#modal').addEventListener('click',e=>{if(e.target===$('#modal')){const r=e.target.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)e.target.close();}});
-window.addEventListener('hashchange',()=>{agendaExpanded=false;if($('#modal').open)$('#modal').close();render();});
+window.addEventListener('hashchange',()=>{const serviceChanged=route().id!==lastService;agendaExpanded=false;if($('#modal').open)$('#modal').close();render();if(serviceChanged){if(matchMedia('(max-width:850px)').matches)$('#main').scrollIntoView({block:'start'});else window.scrollTo(0,0);}else{$('.stages').scrollIntoView({block:'start'});$('.stage.active')?.focus({preventScroll:true});}});
 render();if(storageWarning)toast('No se pudieron recuperar datos anteriores. Se cargaron ejemplos.');
