@@ -1,30 +1,28 @@
-# Dirección de diseño · Cuaderno operativo
+# Rescue Team — UI direction
 
-## Idea
+Operational service app for Sergio and Rescue Team. Preserve the existing service workflow and original logo. All demo records are fictional and stored locally.
 
-Una libreta de campo digital para una empresa de rescate industrial. La unidad de trabajo es el servicio. La agenda abre un único espacio con tres etapas; los recursos se gestionan en contexto, sin secciones administrativas independientes.
+## Current system
 
-## Identidad
+- Warm white surfaces on #F4F5F2, deep green #203B35 and yellow #F3DA5E actions.
+- DM Sans for working UI. Barlow Condensed retained only for the brand mark and small date-independent brand treatments.
+- Rounded controls (9–10 px), work panels (14–18 px), service header (22 px).
+- Soft offset shadows: shallow controls, moderate working panels, stronger protected-focus dialogs.
+- Service dates and real resource counts stay visible. No decorative numbered sections, leading-zero counters, slogans or repeating entrances.
+- Functional labels: Documentación del servicio, Observaciones, Actividades, Fotografías, Reporte.
+- Short press feedback, pointer-only hover enhancement, visible keyboard focus and reduced-motion support.
 
-- Logo original intacto; lettering auxiliar RESCUE TEAM en dos líneas.
-- Papel cálido `#F4F2EB`, tinta `#1C272A`, cabecera `#192B30`, amarillo de acción `#F2DC3A`, oliva secundario. Rojo documental `#A72B32`; los estados siempre incluyen texto.
-- Barlow Condensed para títulos y numerales; DM Sans para lectura e interacción; IBM Plex Mono para referencias breves.
-- Iconos SVG propios en retícula de 24 unidades: casco, mosquetón, cuaderno, cámara, bandera y documento. Ilustración técnica de casco o formación según servicio, sin afirmar capacidades operativas.
-- Composición de agenda y hoja de trabajo, bordes rectos, líneas finas y espacios abiertos. La interfaz no usa tarjetas de métricas de relleno.
+## Skills applied
 
-## Movimiento
+impeccable for clarity and hierarchy; emil-design-eng for control states and restrained motion; web-design-guidelines for labels, focus, layout and responsive checks. Project AGENTS.md selects these for future UI changes.
 
-- Trazo de la ilustración al abrir otro servicio, 1.8 s, una vez.
-- Entrada de etapa de 350 ms; controles con transiciones de 200 ms; sin bucles ni parallax.
-- `prefers-reduced-motion` elimina animaciones/transiciones y deja los dibujos completos.
+## Review
 
-## Interacción
+| Before | After | Why |
+| --- | --- | --- |
+| Uniform square panels | Distinct surfaces with restrained elevation | Clarify interaction and grouping |
+| Decorative section numbers and slogans | Direct working labels | Faster scanning |
+| Repeated illustration and stage entrances | Static illustration, short press feedback | Keep frequent tasks immediate |
+| Small decorative headings | Readable sans headings | Improve mobile legibility |
 
-- En móvil, la agenda comienza plegada bajo “Ver otros servicios”; las etapas permanecen visibles al desplazarse.
-- Pendientes visibles en todos los tamaños; los vencimientos no se ocultan al marcar el checklist.
-- Foco de teclado visible, modales nativos con Escape, botones de al menos 40–46 px para acciones principales. Formularios móviles con texto de 16 px donde corresponde.
-- El reporte es texto HTML imprimible, con logo y pendientes incluidos. No rasteriza el contenido.
-
-## Alcance deliberado
-
-Tres etapas y una agenda. Sin dashboard, inventario separado, CRM, GPS, chat, IA decorativa, estadísticas ficticias ni promesas de certificación. El prototipo demuestra un recorrido completo, no una suite administrativa.
+Validation: existing end-to-end flow, expiry rules, persistence, photos, report/PDF, finish/reopen, keyboard focus and 320–1024 px layouts. Screenshot review covers desktop and mobile. This is a prototype, not certification software.
